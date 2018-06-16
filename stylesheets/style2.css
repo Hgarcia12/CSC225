@@ -1,0 +1,28 @@
+body{
+	background-color: #000000;
+}
+table{
+	width:1000px;
+	background-color: #FFFFFF;
+}
+#tr1{
+	height:150px;
+}
+#tr2{
+	height:700px;
+}
+#tr3{
+	height:50px;
+	background-color: crimson;
+	color: azure;
+}
+#td2{
+	height:700px;
+	vertical-align:top;
+}
+#td2_1{
+	vertical-align:top;
+}
+#td2_2{
+	vertical-align:top;
+}

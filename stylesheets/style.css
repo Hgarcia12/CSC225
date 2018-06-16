@@ -1,0 +1,26 @@
+body{
+	background-color: red;
+	font-size: 12px;
+}
+#navbar{
+	width: 60px;
+	height: 25px;
+	text-align:center-left;
+	background-color: blue;
+	border: 10px;
+}
+#table1{
+	font-size: 15px;
+	border: 10px;
+	text-align: center;
+	width: 1000px;
+}
+table{
+	padding:2px;
+	width:1000px;
+	text-align:center;
+	background-color:yellow;
+	border:10px;
+	border-color:blue;
+	border-style:solid;
+}
