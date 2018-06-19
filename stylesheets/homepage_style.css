@@ -8,23 +8,36 @@ and open the template in the editor.
     Author     : hagig
 */
 body{
-    background-color: salmon;
+    background-color: whitesmoke;
+}
+.navbar{
+    background-color: #555;
+    overflow: hidden;
+}
+.navbar a{
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    text-decoration: none;
+    padding: 20px 20px;
+    font-size: 20px;
+}
+.navbar a:hover{
+    background-color: #ddd;
+    color: black;
 }
 .banner{
     height: 150px;
 }
 .main-body{
-    height: 700px;
+    height: 100%;
 }
 .bottom{
-    height:100px;
-    background-color: crimson;
+    width: 10000px;
+    height: 100px;
+    background-color: #555;
 }
 #body-content{
    vertical-align: top;
-}
-#left-links-home{
-    height:700px;
-    vertical-align:top;
 }
 
