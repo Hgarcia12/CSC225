@@ -6,9 +6,30 @@ and open the template in the editor.
 -->
 <html>
     <head>
-        <title>TODO supply a title</title>
+        <title>Pizza Time!</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>
+            var size;
+            var pizza;
+            var toppings;
+            var drink;
+            function sizes(){
+                
+            }
+            function peps(){
+                document.getElementById("img").src = "./images/Pepperoni.png";
+                toppings = toppings + 0.25;
+            }
+            function g_pepp(){
+                document.getElementById("img").src = "./images/green-peppers.png";
+                toppings = toppings + 0.25;
+            }
+            function calculate(){
+                
+            }
+            
+        </script>
     </head>
     <body>
         <table border="0" align="center" cellpadding="2px">
@@ -16,7 +37,34 @@ and open the template in the editor.
                 <td colspan="3" align="center">
                     <image src="./images/pizza_chef2.png"/>
                 </td>
-            </tr>       
+            </tr>
+            <tr class="main-body">
+                <td id="body-content" align="center" width="100%">
+                    <h1>Order here</h1>
+                    <hr>
+                    <h2>Size</h2>
+                    <input type="button" value="Small" onclick="size = small">
+                    <input type="button" value="Medium" onclick="size = medium">
+                    <input type="button" value="Large" onclick="size = large">
+                    <h2>Cheese</h2>
+                    <input type="button" value="American" onclick="cheese = american">
+                    <input type="button" value="White" onclick="cheese = white">
+                    <input type="button" value="Original" onclick="cheese = original">
+                    <h2>Sauce</h2>
+                    <input type="button" value="Tomato" onclick="pizza = pizza + 0.00">
+                    <input type="button" value="Ranch" onclick="pizza = pizza + 20.00">
+                    <input type="button" value="Bbq" onclick="pizza = pizza + 0.50">
+                    <h2>Toppings</h2>
+                    <img src = "" id = "img"/><input type="button" value="Pepperoni" onclick="peps()">
+                    <input type="button" value="Green Pepper" onclick="g_pepp()">
+                    <input type="button" value="Jalapeno" onclick="toppings = toppings + 0.25">
+                    <input type="button" value="Sausage" onclick="topping = toppings + 0.50">
+                    <h2>Total</h2>
+                    <hr>
+                    <input type="button" value="Calculate" onclick="">
+                    $<input type="text" name="total" value="0.00" size="5" onchange=" ">
+                </td>
+            </tr>      
         </table>    
     </body>
 </html>
