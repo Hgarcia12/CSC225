@@ -9,89 +9,18 @@ and open the template in the editor.
         <title>Pizza Time!</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script>
-            
-            var size;
-            var cheese;
-            var sauce;
-            var toppings;
-            var total;
-            
-            function topping_check(){
-                /*
-                if(toppings == "pepps")
-                    document.getElementById("img").src = "./images/Pepperoni.png";
-                if(toppings == "greenPep")
-                    document.getElementById("img").src = "./images/green-peppers.png";
-                if(toppings == "jalapeno")
-                    document.getElementById("img").src="./images/jalapenos.png"
-                */
-            }
-            function calculate(){
-                var taxRate = 0.088;
-                /*
-                var top;
-                var base;
-                var sauce_price;
-                var cheese_price;
-                
-                if(size == "small")
-                    base = 10;
-                if(size == "medium")
-                    base = 12;
-                if(size == "large")
-                    base = 14;
-                
-                if(toppings == "pepps"){
-                    top = 0.50;
-                }
-                if(toppings == "greenPep"){
-                    top = 0.25;
-                }
-                if(toppings == "jalapeno"){
-                    top = 0.25;
-                }
-                if(toppings == "sausage"){
-                    top = 0.50;
-                }
-                
-                if(sauce=="tomato"){
-                    sauce_price = 0.00;
-                }
-                if(sauce=="ranch"){
-                    sauce_price = 0.25;
-                }
-                if(sauce=="bbq"){
-                    sauce_price = 0.25;
-                }
-                
-                if(cheese=="american"){
-                    cheese_price = 0.50;
-                }
-                if(cheese=="white"){
-                    cheese_price = 0.50;
-                }
-                if(cheese=="mozzarella"){
-                    cheese_price = 0.00;
-                }
-                */
-                total = size + cheese + sauce + toppings;
-                total = total * taxRate;
-                document.forms[0].price.value = total;
-                }
-            function clear(){
-                size=0;cheese=0;toppings=0;sauce=0;total=0.00;
-                document.forms[0].price.value = "0.00";
-            }
-            
-        </script>
+        <link rel="stylesheet" href="./stylesheets/pizzaform_style.css">
+        <script type="text/javascript" src="./scripts/pizzatime_script.js"></script>
     </head>
-    <body>
+    <body onload="loadParam()">
        <form action="" >
         <table border="0" align="center" cellpadding="2px">
             <tr class="banner">
                 <td colspan="3" align="center">
-                    <image src="./images/pizza_chef2.png"/>
+                    <div class="the_chef">
+                    <a href="./index.html"><image src="./images/pizza_chef2.png"/></a>
+                    <span class="chef_says">Buy more pizza!</span>
+                    </div>
                 </td>
             </tr>
             <tr class="main-body">
@@ -99,23 +28,23 @@ and open the template in the editor.
                     <h1>Order here</h1>
                     <hr>
                     <h2>Size</h2>
-                    <input type="button" value="Small" onclick='size = 10'/>
-                    <input type="button" value="Medium" onclick='size = 12'/>
-                    <input type="button" value="Large" onclick='size = 14'/>
+                    <input type="button" value="Small" onclick='base="small"'/>
+                    <input type="button" value="Medium" onclick='base = "medium"'/>
+                    <input type="button" value="Large" onclick='base = "large"'/>
                     <h2>Cheese</h2>
-                    <input type="button" value="American" onclick='cheese = 0.50'/>
-                    <input type="button" value="White" onclick='cheese = 0.50'/>
-                    <input type="button" value="Mozzarella" onclick='cheese = 0'/>
+                    <input type="button" value="American" onclick='cheese = "american"'/>
+                    <input type="button" value="White" onclick='cheese = "white"'/>
+                    <input type="button" value="Mozzarella" onclick='cheese = "mozzarella"'/>
                     <h2>Sauce</h2>
-                    <input type="button" value="Tomato" onclick='sauce = 0'/>
-                    <input type="button" value="Ranch" onclick='sauce = 0.50'/>
-                    <input type="button" value="Bbq" onclick='sauce = 0.50'/>
+                    <input type="button" value="Tomato" onclick='sauce = "tomato"'/>
+                    <input type="button" value="Ranch" onclick='sauce = "ranch"'/>
+                    <input type="button" value="Bbq" onclick='sauce = "bbq"'/>
                     <h2>Toppings</h2>
                     <img src = "" id = "img"/>
-                    <input type="button" value="Pepperoni" onclick='toppings=0.50'/>
-                    <input type="button" value="Green Pepper" onclick='toppings=0.25'/>
-                    <input type="button" value="Jalapeno" onclick='toppings =0.25'/>
-                    <input type="button" value="Sausage" onclick='toppings = 0.50'/>
+                    <input type="button" value="Pepperoni" onclick='toppings="peps";topping_check()'/>
+                    <input type="button" value="Green Pepper" onclick='toppings="g_pep";topping_check()'/>
+                    <input type="button" value="Jalapeno" onclick='toppings ="jalapeno";topping_check()'/>
+                    <input type="button" value="Sausage" onclick='toppings = "sausage";topping_check()'/>
                     <h2>Total</h2>
                     <hr>
                     <input type="button" value="Buy" onclick="calculate()"/>
@@ -125,10 +54,10 @@ and open the template in the editor.
                     <br>
                     <input type="button" value="clear" onclick='
                             document.forms[0].price.value = "0.00";
-                           size=0;
-                           cheese=0;
-                           toppings=0;
-                           sauce=0;
+                           base="none";
+                           cheese="none";
+                           toppings="none";
+                           sauce="none";
                            total=0;
                            '/>
                 </td>

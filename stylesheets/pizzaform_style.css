@@ -17,3 +17,25 @@ body{
     text-align: center;
     
 }
+.the_chef{
+    position: relative;
+    display: inline-block;
+}
+.the_chef .chef_says {
+    visibility: hidden;
+    width: 110px;
+    background-color: red;
+    color: white;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+    border-color: black;
+    border-width:10px; 
+    border-style:dotted;
+    
+    position: absolute;
+    z-index: 0;
+}
+.the_chef:hover .chef_says{
+    visibility: visible;
+}
