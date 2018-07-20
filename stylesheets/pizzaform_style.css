@@ -17,21 +17,41 @@ body{
     text-align: center;
     
 }
+#sep_line{
+    background-color: red;
+}
+#buy_button:hover{
+    background-color: red;
+    border:2px solid red;
+}
+#clear_button:hover{
+    background-color: red;
+    border:2px solid red;
+}
+input[type=button] {
+    padding:5px; 
+    background-color: #E82C0C;
+    border:2px solid red; 
+    border-radius: 10px;
+}
+input[type=button]:hover{
+    background-color: grey;
+    border:2px solid black;
+}
 .the_chef{
     position: relative;
     display: inline-block;
 }
 .the_chef .chef_says {
     visibility: hidden;
+    font-size: 22px;
     width: 110px;
-    background-color: red;
-    color: white;
+    color: red;
     text-align: center;
     padding: 5px 0;
     border-radius: 6px;
     border-color: black;
-    border-width:10px; 
-    border-style:dotted;
+    border-width:10px;
     
     position: absolute;
     z-index: 0;

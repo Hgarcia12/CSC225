@@ -6,9 +6,9 @@ function topping_check(){
                 if(toppings == "g_pep")
                     document.getElementById("img").src = "./images/green-peppers.png";
                 if(toppings == "jalapeno")
-                    document.getElementById("img").src= "./images/jalapenos.png"
+                    document.getElementById("img").src= "./images/jalapenos.png";
                 if(toppings == "sausage")
-                    document.getElementById("img").src= "./images/McIntosh_Apple.png"
+                    document.getElementById("img").src= "./images/sausage.png";
             }
 function calculate(){
                 var taxRate = 0.088;
